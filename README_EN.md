@@ -55,6 +55,12 @@ figma-page-translate/
 
 ## Quick start
 
+Clone the repo (you only need `SKILL.md` for the agent and `assets/bridge/` for the bridge):
+
+```bash
+git clone https://github.com/SeeseaQ/figma-page-translate.git
+```
+
 ```bash
 cp -r assets/bridge ~/.workbuddy/figma-bridge
 cd ~/.workbuddy/figma-bridge && npm install

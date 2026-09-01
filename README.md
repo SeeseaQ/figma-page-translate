@@ -66,6 +66,14 @@ figma-page-translate/
 
 ## 快速开始（5 步）
 
+**⓪ 先把仓库拿下来**
+
+```bash
+git clone https://github.com/SeeseaQ/figma-page-translate.git
+```
+
+只需要 `SKILL.md`（给 AI 读）和 `assets/bridge/`（写桥源码）两部分。
+
 ```mermaid
 flowchart TD
     S1["① 安装写桥<br/>npm install + 注册 MCP"] --> S2["② Figma 导入插件<br/>Import plugin from manifest"]
