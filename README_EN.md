@@ -6,6 +6,16 @@
 
 ---
 
+## Use cases
+
+| Scenario | Pain point | How this skill helps |
+| --- | --- | --- |
+| **Cross-border e-commerce** | Product detail pages on Alibaba / Made-in-China / a standalone site need 5 languages at once. After one source page, the rest are copied and hand-edited | Say "translate this page into Arabic" → scan → translate → write in place → verify. One language drops from a day to minutes |
+| **Multilingual product catalogues** | A 20-page catalogue needs 6 language versions. Model numbers, spec tables and dimension annotations must stay untouched | Auto-classifies translate-vs-keep: models matched by regex and skipped; font size / weight / alignment all preserved |
+| **Multilingual manuals** | Equipment installation / operation / maintenance manuals laid out in Figma. Arabic RTL and Russian Cyrillic are impossible by hand | RTL LEFT↔RIGHT flipped automatically, target font + weight mapping applied, post-write re-scan confirms zero residue |
+
+---
+
 ## Why this exists
 
 The Figma **REST API is read-only**. To change text on the canvas you must go through the **Figma Plugin API** (a plugin running inside Figma Desktop). So the hard part of "let AI translate my page" isn't translation — it's **writing back**.
