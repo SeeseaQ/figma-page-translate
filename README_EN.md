@@ -2,7 +2,7 @@
 
 > Machine-translate every text node on a Figma page and write it back **in place**, preserving font family / weight / size, alignment (including RTL `LEFT↔RIGHT` flip), color, position and auto-resize. A built-in re-scan asserts **0 residual source-language characters**.
 
-[中文 README](./README.md) · [Illustrated setup guide (Word)](./docs/figma-translate-guide.docx)
+[中文 README](./README.md) · [Illustrated setup guide (Word, Chinese)](./docs/figma-translate-guide.docx) · [Bilingual guide (Word, CN/EN)](./docs/figma-translate-guide-bilingual.docx)
 
 ---
 
@@ -43,7 +43,7 @@ figma-page-translate/
 ├── SKILL.md                  # the skill itself (read by the AI agent)
 ├── README.md / README_EN.md
 ├── LICENSE                   # MIT
-├── docs/                     # illustrated Word guide (Chinese)
+├── docs/                     # illustrated Word guides (Chinese, and bilingual CN/EN)
 └── assets/bridge/            # runnable write-bridge source
     ├── server.ts             # MCP stdio server (scan / write / verify / list_fonts)
     ├── package.json / tsconfig.json / .vscode/mcp.json

@@ -2,7 +2,7 @@
 
 > 把 Figma 里整页文案**自动翻译成任意语言并原位写回**，字体 / 字号 / 字重 / 对齐（含 RTL 左右翻转）/ 颜色 / 位置 / 自动尺寸全部保留，写完自动复扫验收「源语言残留 = 0」。
 
-[English README](./README_EN.md) · [图文安装使用说明 (Word)](./docs/figma-translate-guide.docx)
+[English README](./README_EN.md) · [图文安装使用说明 (Word)](./docs/figma-translate-guide.docx) · [中英双语版 (Bilingual Word)](./docs/figma-translate-guide-bilingual.docx)
 
 ---
 
@@ -48,7 +48,8 @@ figma-page-translate/
 ├── README_EN.md                  # English version
 ├── LICENSE                       # MIT
 ├── docs/
-│   └── figma-translate-guide.docx   # 图文安装 & 使用说明（中文，Word）
+│   ├── figma-translate-guide.docx             # 图文安装 & 使用说明（中文，Word）
+│   └── figma-translate-guide-bilingual.docx   # 中英双语版（Bilingual CN/EN，Word）
 └── assets/bridge/                # 可运行的写桥源码
     ├── server.ts                 # MCP stdio 服务端（工具：scan / write / verify / list_fonts）
     ├── package.json
