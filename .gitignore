@@ -1,0 +1,22 @@
+node_modules/
+dist/
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# 本地产物：扫描/批次/验收文件（含项目数据，不入库）
+scan*.json
+*_batch*.json
+*_verify.json
+translation_table.csv
+arabic_translation_table.csv
+
+# 字体文件（体积大，且字体版权需自行确认）
+*.ttf
+*.otf
+
+# 编辑器/系统
+.vscode/*
+!.vscode/mcp.json
+*.swp

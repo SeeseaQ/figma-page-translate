@@ -1,0 +1,12 @@
+{
+  "name": "MCP Figma Write Bridge",
+  "id": "mcp-figma-write-bridge",
+  "api": "1.0.0",
+  "main": "plugin.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["*"],
+    "reasoning": "This plugin needs network access to communicate with the MCP write bridge server running on your local machine."
+  }
+}

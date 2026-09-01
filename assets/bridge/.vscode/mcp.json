@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "figma-write-bridge": {
+      "type": "stdio",
+      "command": "npm",
+      "args": ["run", "figma"]
+    }
+  }
+}
