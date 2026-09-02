@@ -12,7 +12,8 @@
 | --- | --- | --- |
 | **Cross-border e-commerce** | Product detail pages on Alibaba / Made-in-China / a standalone site need 5 languages at once. After one source page, the rest are copied and hand-edited | Say "translate this page into Arabic" → scan → translate → write in place → verify. One language drops from a day to minutes |
 | **Multilingual product catalogues** | A 20-page catalogue needs 6 language versions. Model numbers, spec tables and dimension annotations must stay untouched | Auto-classifies translate-vs-keep: models matched by regex and skipped; font size / weight / alignment all preserved |
-| **Multilingual manuals** | Equipment installation / operation / maintenance manuals laid out in Figma. Arabic RTL and Russian Cyrillic are impossible by hand | RTL LEFT↔RIGHT flipped automatically, target font + weight mapping applied, post-write re-scan confirms zero residue |
+| **Multilingual manuals** | Product installation / operation / maintenance manuals laid out in Figma. Arabic RTL and Russian Cyrillic are impossible by hand | RTL LEFT↔RIGHT flipped automatically, target font + weight mapping applied, post-write re-scan confirms zero residue |
+| **Study-abroad portfolios** | Portfolios / design proposals laid out in Figma need bilingual or multilingual versions for applications or job hunting; hand-editing breaks typography | One command translates the whole page. Font / size / weight / alignment preserved. MiSans VF covers CN/EN/JP/KR out of the box |
 
 ---
 
@@ -112,13 +113,15 @@ Install `SKILL.md` into your agent's skills folder, open the page in Figma, and 
 
 ## Language support
 
-Any source → target pair.
+Any source → target pair. The default font **MiSans VF** already covers Latin, CJK and Cyrillic scripts — no font change needed. Only RTL scripts (Arabic / Hebrew / Persian) must switch to Noto Sans Arabic, built into Figma.
 
-| Target | Direction | Alignment |
-| --- | --- | --- |
-| Arabic / Hebrew / Persian | RTL | flip `LEFT ↔ RIGHT`, keep `CENTER` / `JUSTIFIED` |
-| French / Spanish / Turkish / Russian | LTR | unchanged |
-| Chinese / Japanese | LTR | unchanged |
+| Target language | Direction | Font | Alignment |
+| --- | --- | --- | --- |
+| English / German / Italian / Portuguese | LTR | MiSans VF (kept as-is) | unchanged |
+| French / Spanish / Turkish | LTR | MiSans VF (kept as-is) | unchanged |
+| Russian / Ukrainian | LTR | MiSans VF (has Cyrillic) | unchanged |
+| Chinese / Japanese / Korean | LTR | MiSans VF (has CJK) | unchanged |
+| Arabic / Hebrew / Persian | RTL | Noto Sans Arabic (built into Figma) | flip `LEFT ↔ RIGHT`, keep `CENTER` / `JUSTIFIED` |
 
 ---
 
