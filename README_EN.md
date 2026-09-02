@@ -125,6 +125,25 @@ Any source → target pair. The default font **MiSans VF** already covers Latin,
 
 ---
 
+## Compatible AI agents
+
+The bridge is an **MCP (Model Context Protocol) stdio server** — MCP is an open standard created by Anthropic, not tied to WorkBuddy. Any agent that supports MCP can connect; the setup is the same: register `figma-write` in the agent's MCP config.
+
+| Agent | MCP support | Config location |
+| --- | --- | --- |
+| **WorkBuddy** | ✅ native | `~/.workbuddy/mcp.json` |
+| **Claude Desktop** | ✅ native (MCP created by Anthropic) | `claude_desktop_config.json` |
+| **Cursor** | ✅ | Cursor Settings → MCP |
+| **Codex CLI (OpenAI)** | ✅ | `~/.codex/config.json` → mcpServers |
+| **Cline** | ✅ | VS Code Cline MCP settings |
+| **Coze (ByteDance)** | ✅ | Coze plugin → MCP server |
+| **Qwen Code / Tongyi** | ✅ | Qwen Code MCP config |
+| **Doubao / other agents** | ⚠️ verify MCP support | If it supports MCP, register per that agent's docs; if not, run `server.ts` manually and call tools directly |
+
+> In short: **if your agent can spawn an MCP stdio server, this bridge works** — it's a standard MCP service with no dependency on any single vendor's proprietary API.
+
+---
+
 ## Gotchas (learned the hard way)
 
 | Pitfall | Consequence | Fix |

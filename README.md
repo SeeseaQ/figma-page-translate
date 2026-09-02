@@ -167,6 +167,27 @@ Agent 会自动跑完整条流水线，并交付：
 
 ---
 
+## 兼容哪些 AI Agent
+
+本 Skill 的核心是一座 **MCP（Model Context Protocol）stdio 服务端**——MCP 是 Anthropic 开源的通用协议标准，不绑定 WorkBuddy。任何支持 MCP 的 Agent 都能接入，配置方式一样：在 Agent 的 MCP 配置里注册 `figma-write` 服务端即可。
+
+| Agent | 支持 MCP？ | 配置方式 |
+| --- | --- | --- |
+| **WorkBuddy** | ✅ 原生 | `~/.workbuddy/mcp.json` |
+| **Claude Desktop** | ✅ 原生（MCP 由 Anthropic 创建） | `claude_desktop_config.json` |
+| **Cursor** | ✅ | Cursor Settings → MCP |
+| **Codex CLI (OpenAI)** | ✅ | `~/.codex/config.json` → mcpServers |
+| **Cline** | ✅ | VS Code Cline MCP 设置 |
+| **扣子 / Coze (字节跳动)** | ✅ | Coze 插件 → MCP 服务端 |
+| **通义千问 / Qwen Code** | ✅ | Qwen Code MCP 配置 |
+| **豆包 / 其它 Agent** | ⚠️ 需确认是否支持 MCP | 若支持 MCP，按该 Agent 的 MCP 配置文档注册即可；若不支持，可手动用 Node 跑 `server.ts` + 调用工具 |
+
+> 一句话：**只要你的 Agent 能跑 MCP stdio 服务端，这套写桥就能用**——它只是一个标准的 MCP 服务，不依赖任何特定 Agent 的私有 API。
+
+> The bridge is a standard MCP stdio server. **Any agent that supports MCP can use it** — it does not depend on WorkBuddy or any single vendor's proprietary API.
+
+---
+
 ## 踩坑清单（都是真金白银换来的）
 
 | 坑 | 后果 | 解法 |
